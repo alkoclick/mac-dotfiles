@@ -2,12 +2,10 @@ locals {
   cmd_print_key = jsonencode({
     "\"pub\"" : "\"$(gpg --list-signatures --with-colons $ID | grep pub | cut -d : -f 5)\""
   })
-  gpg_key_id = try(shell_script.gpg_key[0].output.pub, "")
+  gpg_key_id = try(shell_script.gpg_key.output.pub, "")
 }
 
 resource "shell_script" "gpg_key" {
-  count = 1
-
   lifecycle_commands {
     create = file("${path.module}/scripts/create_gpg_key.sh")
     read   = format("echo %s", local.cmd_print_key)
