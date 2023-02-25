@@ -48,7 +48,7 @@ disabled = false
 
 ### DevOops ###
 [kubernetes]
-format = '[$context \($namespace\)](dimmed green) ⛵ \\n'
+format = '[$context \($namespace\)](dimmed green) ⛵ '
 disabled = false
 
 [memory_usage]

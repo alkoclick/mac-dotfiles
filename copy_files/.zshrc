@@ -11,6 +11,9 @@ export GPG_TTY=$(tty)
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
+# For the Toolbox App
+export PATH="$PATH:/Users/alex/Library/Application Support/JetBrains/Toolbox/scripts"
+
 # Load aliases from separate file
 . ~/.zsh_aliases
 
