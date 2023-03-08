@@ -11,6 +11,7 @@ locals {
     "fzf",
     "gh",
     "gitleaks",
+    "jira-cli", # needs `brew tap ankitpokhrel/jira-cli`
     "httpie",
     "k9s",
     "kubectl",
