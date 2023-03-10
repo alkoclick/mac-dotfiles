@@ -35,6 +35,9 @@ alias m=micro
 # Better find
 alias fd="fd -H"
 
+# JIRA
+alias jic="jira issue create -a alexandros@miro.com -T ~/.config/.jira/wcore-template.yml -s"
+
 # Copy to cliboard for all outputs
 alias cs="pbcopy"
 
