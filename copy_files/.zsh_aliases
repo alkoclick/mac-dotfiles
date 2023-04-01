@@ -49,7 +49,7 @@ alias oplog='export OP_SESSION_my=$(op signin my --raw)'
 alias k=kubectl
 alias ksh="kubectl run -i --tty busybox --image=busybox --restart=Never && kubectl delete pod busybox"
 alias drun="docker run --rm -it"
-alias dockerhere="docker run --rm -it --entrypoint bash -v $PWD:/app --workdir /app"
+alias dockerhere="docker run --rm -it --entrypoint bash -v `pwd`:/app --workdir /app"
 alias tin="terraform init"
 # Can be combined with -target etc
 alias tpl="terraform plan -out terraform.tfplan"
