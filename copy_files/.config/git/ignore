@@ -3,3 +3,4 @@
 .obsidian
 
 terraform.tfplan
+.DS_Store
