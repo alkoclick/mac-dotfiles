@@ -22,5 +22,18 @@ export PATH="$PATH:/Users/alex/Library/Application Support/JetBrains/Toolbox/scr
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# AWS IP lookup function
+aws_lookup_ip() {
+  if [ $# -lt 1 ]
+  then
+    echo "Usage: $funcstack[1] <IP or list of IPs separated by commas>"
+    return
+  fi
+
+  QUERY_FMT="NetworkInterfaces[*].{ Type: InterfaceType, Description: Description, AZ: AvailabilityZone, PublicIP: Association.PublicIp, PrivateIP: PrivateIpAddress}"
+  aws ec2 describe-network-interfaces --output table --query $QUERY_FMT --max-items 500 --filters "Name=addresses.private-ip-address,Values=$1"
+  aws ec2 describe-network-interfaces --output table --query $QUERY_FMT --max-items 500 --filters "Name=association.public-ip,Values=$1"
+}
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
