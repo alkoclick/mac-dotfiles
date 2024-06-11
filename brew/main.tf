@@ -11,7 +11,8 @@ locals {
     "fzf",
     "gh",
     "gitleaks",
-    "jira-cli", # needs `brew tap ankitpokhrel/jira-cli`
+    "granted", # needs tap below
+    "jira-cli", # needs tap below
     "httpie",
     "k9s",
     "kubectl",
@@ -22,6 +23,11 @@ locals {
     "terraform-docs",
     "terragrunt",
     "zoxide",
+  ]
+  # TODO: Actually install these automatically
+  brew_taps = [
+    "ankitpokhrel/jira-cli",
+    "common-fate/granted"
   ]
   cmd_print_version = jsonencode({ "\"version\"" = "\"$(brew list --versions $PACKAGE)\"" })
 }

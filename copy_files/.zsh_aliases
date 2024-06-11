@@ -51,7 +51,10 @@ alias ksh="kubectl run -i --tty busybox --image=busybox --restart=Never && kubec
 alias drun="docker run --rm -it"
 alias dockerhere="docker run --rm -it --entrypoint bash -v `pwd`:/app --workdir /app"
 alias tin="terraform init"
+alias tgin="terragrunt init"
 # Can be combined with -target etc
 alias tpl="terraform plan -out terraform.tfplan"
+alias tgpl="terragrunt plan -out terraform.tfplan"
 alias tap="terraform apply 'terraform.tfplan'"
+alias tgap="terragrunt apply 'terraform.tfplan'"
 alias tcl="terraform fmt -recursive . && terraform-docs ."
