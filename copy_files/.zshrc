@@ -40,5 +40,10 @@ aws_lookup_ip() {
 # Also allow the assume command to actually work
 alias assume="source assume"
 
+# Mac-specific configs
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+export GODEBUG=asyncpreemptoff=1
+export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
