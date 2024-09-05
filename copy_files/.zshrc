@@ -6,7 +6,6 @@ export GPG_TTY=$(tty)
 
 # Fancy terminal stuff, some of this is probably installed via Brew, so make sure it's sourced on zprofile
 eval "$(starship init zsh)"
-eval "$(zoxide init --cmd cd zsh)"
 
 # For the Toolbox App
 export PATH="$PATH:/Users/alex/Library/Application Support/JetBrains/Toolbox/scripts"
@@ -27,6 +26,9 @@ fi
 [ -f ~/.custom_aliases.zsh ] && source ~/.custom_aliases.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Smarter cd courtesy of zoxide, has to be after compinit is called
+eval "$(zoxide init --cmd cd zsh)"
 
 # AWS IP lookup function
 aws_lookup_ip() {
