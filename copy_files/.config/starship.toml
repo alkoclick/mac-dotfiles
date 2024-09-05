@@ -36,6 +36,10 @@ symbol = "⎇  "
 [git_branch]
 style = "bold cyan"
 
+[git_status]
+ignore_submodules = true
+untracked = ""
+
 [git_commit]
 tag_disabled = false
 
