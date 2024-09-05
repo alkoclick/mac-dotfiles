@@ -11,6 +11,15 @@ eval "$(zoxide init --cmd cd zsh)"
 # For the Toolbox App
 export PATH="$PATH:/Users/alex/Library/Application Support/JetBrains/Toolbox/scripts"
 
+# Support completions for stuff
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # Load aliases from separate file
 . ~/.zsh_aliases
 
