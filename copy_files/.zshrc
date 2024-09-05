@@ -1,6 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-
 # Let's be a simple human
 export EDITOR=micro
 
@@ -44,6 +41,3 @@ alias assume="source assume"
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export GODEBUG=asyncpreemptoff=1
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

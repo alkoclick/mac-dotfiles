@@ -7,7 +7,6 @@ locals {
     "--cask raycast",
     "cloc",
     "fd",
-    "fig",
     "fzf",
     "gh",
     "gitleaks",
