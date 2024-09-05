@@ -21,6 +21,7 @@ locals {
     "starship",
     "terraform-docs",
     "terragrunt",
+    "tldr",
     "zoxide",
   ]
   # TODO: Actually install these automatically
