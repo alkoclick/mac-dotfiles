@@ -52,3 +52,4 @@ alias assume="source assume"
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export GODEBUG=asyncpreemptoff=1
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
+export TERRAGRUNT_FETCH_DEPENDENCY_OUTPUT_FROM_STATE=true
