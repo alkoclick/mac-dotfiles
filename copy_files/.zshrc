@@ -4,6 +4,10 @@ export EDITOR=micro
 # For GPG
 export GPG_TTY=$(tty)
 
+# This should be the default anyway, but there have been some sus behaviours:
+# https://github.com/starship/starship/issues/5994
+export STARSHIP_CONFIG="$HOME/.config/starship.toml"
+
 # Fancy terminal stuff, some of this is probably installed via Brew, so make sure it's sourced on zprofile
 eval "$(starship init zsh)"
 

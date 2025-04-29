@@ -1,3 +1,5 @@
+command_timeout = 30
+
 ### Battery ###
 [battery]
 format = "[$symbol$percentage]($style) "
@@ -60,6 +62,9 @@ format = "-- [${ram}]($style) "
 symbol = ""
 disabled = false
 threshold = 80
+
+[python]
+python_binary = ['python3']
 
 [terraform]
 format = "on [$symbol$workspace]($style) "
